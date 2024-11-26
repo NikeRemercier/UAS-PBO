@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 import UAS_PBO_NEW.DatabaseConnection;
 import UAS_PBO_NEW.dao.KelasDAO;
+import UAS_PBO_NEW.gui.role.AdminGUI;
 import UAS_PBO_NEW.model.Kelas;
 
 public class KelasManagementGUI extends JFrame {
@@ -117,7 +118,7 @@ public class KelasManagementGUI extends JFrame {
         panel.add(new JLabel("Tingkatan:"));
         panel.add(tingkatanField);
 
-        int result = JOptionPane.showConfirmDialog(this, panel, "Edit Pengguna", JOptionPane.OK_CANCEL_OPTION,
+        int result = JOptionPane.showConfirmDialog(this, panel, "Edit Kelas", JOptionPane.OK_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE);
         if (result == JOptionPane.OK_OPTION) {
             try {

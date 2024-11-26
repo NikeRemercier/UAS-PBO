@@ -5,7 +5,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.*;
-import UAS_PBO_NEW.gui.AdminGUI;
+import UAS_PBO_NEW.gui.role.AdminGUI;
+import UAS_PBO_NEW.gui.role.GuruGUI; // Import GuruGUI
 
 public class LoginGUI extends JFrame {
     private JTextField usernameField;
@@ -13,7 +14,7 @@ public class LoginGUI extends JFrame {
 
     public LoginGUI() {
         setTitle("Login Sistem Akademik");
-        setSize(400, 300);
+        setSize(600, 400);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
         setResizable(true); // Mengaktifkan perubahan ukuran jendela
@@ -88,6 +89,9 @@ public class LoginGUI extends JFrame {
                     switch (role) {
                         case "admin":
                             new AdminGUI().setVisible(true);
+                            break;
+                        case "guru":
+                            new GuruGUI().setVisible(true); // Navigate to GuruGUI if role is guru
                             break;
                         default:
                             JOptionPane.showMessageDialog(null, "Role tidak dikenal.");
